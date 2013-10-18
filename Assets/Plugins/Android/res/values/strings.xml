@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">CentiliBilling</string>
+	<string name="yes">Yes</string>
+	<string name="info">Info</string>
+	<string name="no">No</string>
+	<string name="ok">OK</string>
+	<string name="wait">Wait</string>
+	<string name="pay">Pay %s?</string>
+	<string name="pay_vat">Pay s +VAT s?</string>
+	<string name="phone_bill">The cost will be charged to your mobile phone bill.</string>
+	<string name="loading">Please wait…</string>
+	<string name="fetching_fail_generic">Sorry. Could not load payment details.</string>
+	<string name="fetching_fail_no_data">Data connection is needed to load the payment details.</string>
+	<string name="fetching_fail_unsupported_country">Your country is currently unsupported.</string>
+	<string name="fetching_fail_unknown_simop">Sorry, could not detect your mobile operator.</string>
+	<string name="fetching_fail_unsupported_network">Your network is currently unsupported.</string>
+	<string name="purchase_wait">This transaction takes longer than expected. If you wish to continue waiting, please tap \'Wait\' button. If you wish to cancel waiting and transaction, please tap \'Cancel\' button.</string>
+	<string name="terms_and_conditions">Terms &amp; Conditions</string>
+	
+	<string name="processing1">Initiating purchase.</string>
+	<string name="processing2">Connecting to mobile operator.</string>
+	<string name="processing3">Processing payment.</string>
+	
+	<string name="payment_success">You have been charged %s</string>
+	<string name="nonconsumable_already_purchased">You have already purchased this product</string>
+	<string name="payment_success_product">You have been charged s for s</string>
+	<string name="payment_failed">We were unable to complete the purchase. This may be caused by failed connectivity to operator\'s billing system. Also, you may have exceeded your spend limit. Please try again later.</string>
+	<string name="payment_pending">We were unable to complete the purchase. This may be caused by slow network connection or bad connectivity to operator\'s billing system. If you receive a "purchase complete" SMS later but do not see purchased items in the application, contact us at support@fortumo.com</string>
+	
+	<string name="fetching_fail_no_sim">SIM card missing</string>
+	<string name="fetching_fail_no_sim_description">Mobile payments can not be made without a SIM card.</string>
+	<string name="fetching_fail_airplane_mode_enabled">Airplane mode ON</string>
+	<string name="fetching_fail_airplane_mode_enabled_description">Mobile payments are unavailable in Airplane mode.</string>
+	<string name="fetching_fail_airplane_mode_enabled_fix_button">Settings</string>
+	<string name="fetching_fail_no_network">Mobile network problem</string>	
+	<string name="fetching_fail_no_network_description">Mobile network is unavailable, device probably out of operator coverage area.</string>
+	<string name="fetching_fail_no_network_fix_button">Settings</string>	
+</resources>
