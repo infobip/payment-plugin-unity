@@ -34,13 +34,17 @@ public class CentiliInternalWrapper	: MonoBehaviour {
 		string presenceMask = new string(new char[]
 		{
 			request.ApiKey == null					? 'a' : 'p',
-			request.PackageIndex == null		? 'a' : 'p',
+			//request.PackageIndex == null		? 'a' : 'p',
+			'p',
 			request.LanguageCode == null		? 'a' : 'p',
 			request.Info == null						? 'a' : 'p',
 			request.ClientId == null 				? 'a' : 'p',
-			request.TestModeEnabled == null	? 'a' : 'p',
-			request.OfflineModeEnabled == null	? 'a' : 'p',
-			request.PendingTransactionHandlingEnabled == null ? 'a' : 'p'
+			// request.TestModeEnabled == null	? 'a' : 'p',
+			'p',
+			// request.OfflineModeEnabled == null	? 'a' : 'p',
+			'p',
+			// request.PendingTransactionHandlingEnabled == null ? 'a' : 'p'
+			'p'
 		});
 
 		// Java side will use this parameter to return data
@@ -52,13 +56,17 @@ public class CentiliInternalWrapper	: MonoBehaviour {
 		{
 			presenceMask,
 			request.ApiKey == null					? "" : request.ApiKey,
-			request.PackageIndex == null		? (int)-1 : (int) request.PackageIndex,
+			// request.PackageIndex == null		? (int)-1 : (int) request.PackageIndex,
+			request.PackageIndex,
 			request.LanguageCode == null		? "EN" : request.LanguageCode,
 			request.Info == null						? "" : request.Info,
 			request.ClientId == null 				? "" : request.ClientId,
-			request.TestModeEnabled == null	? true : request.TestModeEnabled,
-			request.OfflineModeEnabled == null	? true : request.OfflineModeEnabled,
-			request.PendingTransactionHandlingEnabled == null ? false : request.PendingTransactionHandlingEnabled
+			// request.TestModeEnabled == null	? true : request.TestModeEnabled,
+			request.TestModeEnabled,
+			// request.OfflineModeEnabled == null	? true : request.OfflineModeEnabled,
+			request.OfflineModeEnabled,
+			// request.PendingTransactionHandlingEnabled == null ? false : request.PendingTransactionHandlingEnabled
+			request.PendingTransactionHandlingEnabled
 		});
 		
 		// if there is no callback, don't wait for response and return immediately
