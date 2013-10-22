@@ -2,7 +2,7 @@
 This project is Unity3d ([Unity3d](http://unity3d.com/unity "Unity3d")) package which can be merged with your Unity3d project and enable you to use Centili Mobile Payments system.
 
 ## Step By Step integration
-1. Extract our [.unitypackage](http://download.com "Download CentiliUnity.unitypackage") to your project.
+1. Extract our [.unitypackage](http://www.centili.com/manual/unity3d/CentiliUnity.unitypackage "Download CentiliUnity.unitypackage") to your project.
 2. In your code make new _CentiliPaymentRequest_ object (with _ApiKey_ as only mandatory field). 
 ```
 CentiliPaymentRequest request = new CentiliPaymentRequest("your-api-key-abc123abc123")
