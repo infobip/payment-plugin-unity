@@ -21,12 +21,13 @@ namespace CentiliUnity
 		public string ClientId { get; set; }
 		public bool TestModeEnabled { get; set; }
 		public bool OfflineModeEnabled { get; set; }
-		public bool PendingTransactionHandlingEnabled { get; set; }
+		public double Price { get; set; }
 		
 		public CentiliPaymentRequest(string ApiKey) 
 		{
 			this.ApiKey = ApiKey;
 			this.PackageIndex = -1;
+			this.Price = -1.0d;
 		}
 
 		public override string ToString() 
@@ -38,9 +39,9 @@ namespace CentiliUnity
 				"LanguageCode: " + request.LanguageCode == null					? "EN" : request.LanguageCode,
 				"Info: " + request.Info == null												? "" : request.Info,
 				"ClientId: " + request.ClientId == null 									? "" : request.ClientId,
-				"TestModeEnabled: " + request.TestModeEnabled == null			? true : request.TestModeEnabled,
-				"OfflineModeEnabled: " + request.OfflineModeEnabled == null	? true : request.OfflineModeEnabled,
-				"PendingTransactionHandlingEnabled: " + request.PendingTransactionHandlingEnabled == null ? false : request.PendingTransactionHandlingEnabled
+				"TestModeEnabled: " + request.TestModeEnabled == null			? false : request.TestModeEnabled,
+				"OfflineModeEnabled: " + request.OfflineModeEnabled == null	? false : request.OfflineModeEnabled,
+				"Price: " + request.Price == null ? (double)(-1.0d) : request.Price
 			);
 		}
 	}
@@ -144,6 +145,36 @@ namespace CentiliUnity
 				CentiliInternalWrapper.Instance.MakePayment(request, callback);
 			} else {
 				// your mockup code here
+			}
+		}
+		
+		private static bool _PendingTransactionHandling = true;
+		public static bool PendingTransactionHandling { 
+			get 
+			{
+				return _PendingTransactionHandling;
+			}
+			set
+			{
+				if (Application.platform == RuntimePlatform.Android) {
+					CentiliInternalWrapper.Instance.SetPendingTransactionHandling(value);
+				}
+				_PendingTransactionHandling = value;
+			}
+		}
+		
+		private static bool _DebugMode = false;
+		public static bool DebugMode {
+			get 
+			{
+				return _DebugMode;
+			}
+			set
+			{
+				if (Application.platform == RuntimePlatform.Android) {
+					CentiliInternalWrapper.Instance.SetDebugMode(value);
+				}
+				_DebugMode = value;
 			}
 		}
 

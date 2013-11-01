@@ -19,6 +19,30 @@ public class CentiliInternalWrapper	: MonoBehaviour {
 		StartCoroutine(MakePaymentCoroutine(request, callback));
 	}
 	
+	public void SetPendingTransactionHandling(bool enabled) 
+	{
+		StartCoroutine(SetPendingTransactionHandlingCoroutine(enabled));
+	}
+	
+	public void SetDebugMode(bool enabled) 
+	{
+		StartCoroutine(SetDebugModeCoroutine(enabled));
+	}
+	
+	private IEnumerator SetDebugModeCoroutine(bool enabled) 
+	{
+		GetInstance();
+		GetCurrentActivity().Call("setDebugModeEnabled", new object[] { enabled });
+		yield return 0;
+	}
+	
+	private IEnumerator SetPendingTransactionHandlingCoroutine(bool enabled)
+	{
+		GetInstance();
+		GetCurrentActivity().Call("setPendingTransactionHandlingEnabled", new object[] { enabled });
+		yield return 0;
+	}
+	
 	/// <summary>
 	/// MakePayment coroutine that can wait until the CentiliPaymentResponse is ready
 	/// </summary>
@@ -66,7 +90,7 @@ public class CentiliInternalWrapper	: MonoBehaviour {
 			// request.OfflineModeEnabled == null	? true : request.OfflineModeEnabled,
 			request.OfflineModeEnabled,
 			// request.PendingTransactionHandlingEnabled == null ? false : request.PendingTransactionHandlingEnabled
-			request.PendingTransactionHandlingEnabled
+			request.Price
 		});
 		
 		// if there is no callback, don't wait for response and return immediately
@@ -90,10 +114,10 @@ public class CentiliInternalWrapper	: MonoBehaviour {
 	// Just ignore PENDING notification
 	public void SignalPaymentPending(string voidArg0)
 	{
-		// CentiliPaymentResponse response = new CentiliPaymentResponse(GetCurrentActivity());
+		CentiliPaymentResponse response = new CentiliPaymentResponse(GetCurrentActivity());
 		
 		lastCentiliPaymentStatus = CentiliPaymentStatus.PAYMENT_PENDING;
-		// lastCentiliPaymentResponse = response;
+		lastCentiliPaymentResponse = response;
 	}
 	
 	public void SignalPaymentFailed(string voidArg0)
