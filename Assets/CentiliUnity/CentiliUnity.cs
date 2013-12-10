@@ -58,7 +58,6 @@ namespace CentiliUnity
 			ClientId = activity.Get<string>("responseClientId");
 			Price = activity.Get<double>("responsePrice");
 			ItemAmount = activity.Get<int>("responseItemAmount");
-			ItemName = activity.Get<string>("responseItemName");
 			Currency = activity.Get<string>("responseCurrency");
 			TransactionId = activity.Get<string>("responseTransactionId");
 			ErrorMessage = activity.Get<string>("responseErrorMessage");
@@ -66,9 +65,6 @@ namespace CentiliUnity
 		
 		// Amount of credits paid for by the user (if the user buys "3 swords" then this value is "3").
 		public int ItemAmount;
-		
-		// Name of the credits paid for by the user (in case of "3 swords" this would be "swords").
-		public string ItemName;
 
 		// Currency in which transaction was processed
 		public string Currency;
@@ -94,10 +90,10 @@ namespace CentiliUnity
 		public override string ToString() {
 			return string.Format("CentiliPaymentResponse: {\n\t" +
 				"ApiKey:{0},\n\tTransactionId:{1},\n\tItemAmount:{2},\n\t" +
-				"ItemName:{3},\n\tPrice:{4},\n\tCurrency:{5},\n\t" +
-				"ClientId:{6},\n\tErrorMessage:{7}\n}",
+				"Price:{3},\n\tCurrency:{4},\n\t” +
+				"ClientId:{5},\n\tErrorMessage:{6}\n}”,
 				ApiKey, TransactionId, ItemAmount, 
-				ItemName, Price, Currency,
+				Price, Currency,
 				ClientId, ErrorMessage);
 		}
 	}
