@@ -35,6 +35,3 @@ This project is Unity3d ([Unity3d](http://unity3d.com/unity "Unity3d")) package 
 
 - You can get and set *CentiliPaymentManager*.*DebugMode* to true or false to get our logger output debug data. Defaults to false.
 - You can also set or unset *CentiliPaymentManager*.*PendingTransactionHandling*, which will influence whether will we continue pending payment when new payment request is sent, or will we start a new payment request. Default is true, which means that we will try to resume unresolved transaction.
-
-## Owners
-Framework Integration Team
