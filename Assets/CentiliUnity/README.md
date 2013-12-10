@@ -8,8 +8,8 @@ This project is Unity3d ([Unity3d](http://unity3d.com/unity "Unity3d")) package 
 	```
 	CentiliPaymentRequest request = new CentiliPaymentRequest("your-api-key-abc123abc123")
 	{
-		PackageIndex = 1, /* Preselecting package with index 1 */
-		ClientId = this.MyUserId
+		PackageIndex = 1, /* Preselecting package with index 1 (defaults to -1 which means no package preselected - user will select among listed packages). Note that this refers to ordinal of package in service with provided api key (not to PackageId). */
+		ClientId = this.MyUserId /* Passing ClientId string as identificator of client (end user) of purchase. */
 	};
 	```
 
