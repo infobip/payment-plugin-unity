@@ -1,4 +1,4 @@
-# Centili Mobile Payments Unity 3D Plugin
+# Centili Mobile Payments Plugin for Unity 3D
 This project is Unity3d ([Unity3d](http://unity3d.com/unity "Unity3d")) package which can be merged with your Unity3d project and enable you to use Centili Mobile Payments system.
 
 ## Step By Step integration
