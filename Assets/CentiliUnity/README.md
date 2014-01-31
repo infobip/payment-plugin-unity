@@ -1,4 +1,4 @@
-# Centili Mobile Payments Unity 3D Plugin
+# Centili Mobile Payments Plugin for Unity 3D
 This project is Unity3d ([Unity3d](http://unity3d.com/unity "Unity3d")) package which can be merged with your Unity3d project and enable you to use Centili Mobile Payments system.
 
 ## Step By Step integration
@@ -8,8 +8,8 @@ This project is Unity3d ([Unity3d](http://unity3d.com/unity "Unity3d")) package 
 	```
 	CentiliPaymentRequest request = new CentiliPaymentRequest("your-api-key-abc123abc123")
 	{
-		PackageIndex = 1, /* Preselecting package with index 1 (defaults to -1 which means no package preselected - user will select among listed packages). Note that this refers to ordinal of package in service with provided api key (not to PackageId). */
-		ClientId = this.MyUserId /* Passing ClientId string as identificator of client (end user) of purchase. */
+		PackageIndex = 1, /* Preselecting package with index 1 */
+		ClientId = this.MyUserId
 	};
 	```
 
@@ -25,8 +25,8 @@ This project is Unity3d ([Unity3d](http://unity3d.com/unity "Unity3d")) package 
 	void OnPaymentFinished(CentiliPaymentStatus status, CentiliPaymentResponse response)
 	{
 		if (CentiliPaymentStatus.PAYMENT_SUCCESSFUL.Equals(status))
-	    	{
-	    		this.Users.FindById(response.ClientId).AddCredit(response.ItemAmount);
+	    {
+	    	this.Users.FindById(response.ClientId).AddCredit(response.ItemAmount);
 		}
 	}
 	```
@@ -35,3 +35,14 @@ This project is Unity3d ([Unity3d](http://unity3d.com/unity "Unity3d")) package 
 
 - You can get and set *CentiliPaymentManager*.*DebugMode* to true or false to get our logger output debug data. Defaults to false.
 - You can also set or unset *CentiliPaymentManager*.*PendingTransactionHandling*, which will influence whether will we continue pending payment when new payment request is sent, or will we start a new payment request. Default is true, which means that we will try to resume unresolved transaction.
+
+Owners
+------
+
+Framework Integration Team @ Belgrade, Serbia
+
+*Android is a trademark of Google Inc.*
+
+*IOS is a trademark of Cisco in the U.S. and other countries and is used under license.*
+
+© 2013-2014, Infobip Ltd.

@@ -25,8 +25,8 @@ This project is Unity3d ([Unity3d](http://unity3d.com/unity "Unity3d")) package 
 	void OnPaymentFinished(CentiliPaymentStatus status, CentiliPaymentResponse response)
 	{
 		if (CentiliPaymentStatus.PAYMENT_SUCCESSFUL.Equals(status))
-	    	{
-	    		this.Users.FindById(response.ClientId).AddCredit(response.ItemAmount);
+	    {
+	    	this.Users.FindById(response.ClientId).AddCredit(response.ItemAmount);
 		}
 	}
 	```
@@ -35,3 +35,14 @@ This project is Unity3d ([Unity3d](http://unity3d.com/unity "Unity3d")) package 
 
 - You can get and set *CentiliPaymentManager*.*DebugMode* to true or false to get our logger output debug data. Defaults to false.
 - You can also set or unset *CentiliPaymentManager*.*PendingTransactionHandling*, which will influence whether will we continue pending payment when new payment request is sent, or will we start a new payment request. Default is true, which means that we will try to resume unresolved transaction.
+
+Owners
+------
+
+Framework Integration Team @ Belgrade, Serbia
+
+*Android is a trademark of Google Inc.*
+
+*IOS is a trademark of Cisco in the U.S. and other countries and is used under license.*
+
+© 2013-2014, Infobip Ltd.
