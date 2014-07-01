@@ -24,7 +24,6 @@ public class CentiliUnityDemo : MonoBehaviour {
 
 	private void CentiliCallback(CentiliPaymentStatus status, CentiliPaymentResponse response)
     {
-        print(status);
-        print(response.ItemAmount);
+        print(response.ToString());
     }
 }

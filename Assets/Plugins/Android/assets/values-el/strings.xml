@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="right_to_left">false</string>
+	<string name="app_name">Centili σύστημα χρέωσης</string>
+	<string name="yes">Ναι</string>
+	<string name="info">Info</string>
+	<string name="no">Όχι</string>
+	<string name="ok">Εντάξει</string>
+	<string name="close">Κλείστε</string>
+	<string name="cancel">Ακυρώστε</string>
+	<string name="pay">Πληρώστε</string>
+	<string name="pay_question">Πληρώστε %s %s?</string>
+	<string name="wait">Περιμένετε</string>
+	<string name="continue_waiting">Συνεχίσετε να περιμένετε</string>
+	<string name="check_last_purchase">Ελέγξτε την προγούμενη αγορά</string>
+	<string name="purchase_wait">Αυτή η συναλλαγή διαρκεί περισσότερο από το αναμενόμενο. Εάν θέλετε να συνεχίσετε να περιμένετε, παρακαλούμε πατήστε το &apos;Περιμένετε&apos;. Εάν δε θέλετε να περιμένετε πια και θέλετε να ακυρώσετε τη συναλλαγή, παρακαλούμε πατήστε το &apos;Ακυρώστε&apos;.</string>
+	<string name="purchase_wait_url_redirect_with_additional_msg">Αυτή η συναλλαγή διαρκεί περισσότερο από το αναμενόμενο. Εάν θέλετε να συνεχίσετε να περιμένετε, παρακαλούμε πατήστε το &apos;Περιμένετε&apos;. Εάν δε θέλετε να περιμένετε πια ή εάν δεν έχετε επιβεβαιώσει τη συναλλαγή στην προηγούμενη οθόνη και θέλετε να ακυρώσετε τη συναλλαγή, παρακαλούμε πατήστε το &apos;Ακυρώστε&apos;</string>
+	<string name="pending_purchase_message">Υπάρχει τουλάχιστον μία συναλλαγή η οποία διακόπηκε κατά την επιβεβαίωση. Μήπως θέλετε να ελέγξετε την κατάσταση της προηγούμενης συναλλαγής: Εάν θέλετε, η κατάσταση της προηγούμενης συναλλαγής θα ελεγχθεί χωρίς πιπλέον χρέωση του τηλεφωνικού σας λογαριασμού. Εάν δε θέλετε, θα ξεκινήσει καινούργια συναλλαγή.</string>
+	<string name="terms_and_conditions">Όροι χρήσης</string>
+	<string name="purchase_unsuccessfull">Ανεπιτυχής αγορά!</string>
+	<string name="purchase_canceled">Η αγορά ακυρώθηκε</string>
+	<string name="purchase_has_been_canceled">Η αγορά ακυρώθηκε</string>
+
+	<string name="nothing_charged_note">ΠΡΟΣΟΧΗ: Δε χρεώθηκε τίποτα από τον τηλεφωνικό σας λογαριασμό.</string>
+	<string name="purchase_dropdown_item">%s %s - %s %s</string>
+	<string name="payment_bill_charging_info">Το τίμημα θα χρεωθεί στον τηλεφωνικό σας λογαριασμό.</string>
+	<string name="unable_to_send_sms">Ανεπιτυχής αποστολή μήνυματος. Παρακαλούμε δοκιμάστε ξανά.</string>
+	<string name="please_try_again">Παρακαλούμε δοκιμάστε ξανά.</string>
+	<string name="phone_bill_maybe_charged">ΠΡΟΣΟΧΗ: Υπάρχει δυνατότητα να έχει χρεωθεί ο λογαριασμός σας.</string>
+	<string name="subscription_bill_charging_info">Το τίμημα θα χρεωθεί  από τον τηλεφωνικό σας λογαριασμό %s.</string>
+	<string name="subscription_dropdown_item">%s - %s %s</string>
+	<string name="mobile_data_required">Απαραίτητο διαδίκτυο στο τηλέφωνο</string>
+	<string name="mobile_data_auto_set_failed">Ανεπιτυχής αυτόματη μεταβίβαση στο διαδίκτυο στο κινητό τηλέφωνο</string>
+	<string name="network_settings">Τοποθετήσεις του διαδικτύου</string>
+
+    <string name="fetching_fail_generic">Ανπτυχής λήψηκαταλόγου από τον εξυπηρετητή. Παρακαλούμε δοκιμάστε ξανά.  Εάν το πρόβλημα δε ληφθεί, παρακαλούμε επικοινωνήστε με το κέντρο υποστήριξης.</string>
+	<string name="fetching_fail_unsupported_country">Αυτή τη στιγμή δεν υπάρχει υποστήριξη για τη χώρα σας</string>
+	<string name="fetching_fail_unexisting_service">Συγνώμη, η εξυπηρέτηση για την οποία προσπαθείτε να αρχίσετε την αγορά δεν υφίσταται. Μαρακαλούμε επικοινωνήστε με το κέντρο υποστήριξης.</string>
+	<string name="fetching_fail_unsupported_mno">Αυτή τη στιγμή δεν υπάρχει υποστήριξη για το δικό σας πάροχο κινητής τηλεφωνίας .</string>
+	<string name="fetching_fail_disabled_service">Η εξυπηρέτηση αγοράς αυτή τη στιγμή δε λειτουργεί. Παρακαλούμε δοκιμάστε ξανά ή επικοινωνήστε με το κέντρο υποστήριξης.</string>
+	<string name="purchase_init_fail">Ανεπτυχής προετοιμασία αγοράς. Παρακαλούμε δοκιμάστε ξανά. Εάν το πρόβλημα δε λυθεί, επικοινωνήστε με το κέντρο υποστήριξης.</string>
+
+    <string name="purchase_init_error_status">Υπάρχει πρόβλημα στην προετοιμασία της συναλλαγής σας. Παρακαλούμε δοκιμάστε ξανά. Εάν το πρόβλημα δε λυθεί, παρακαλούμε επικοινωνήστε με το κέντρο υποστήριξης.</string>
+	<string name="processing_please_wait">Παρακαλούμε περιμένετε…</string>
+    <string name="purchase_confirmation_message">Παρακαλώ επιβεβαιώστε οτι επιθυμείτε να πληρώσετε %s %s. Η πληρωμή θα γίνει μέσω SMS, στέλνοντας τη λέξη κλειδί &apos;%s&apos; στο &apos;%s&apos;. Telebox</string>
+    <string name="purchase_confirmation_title">Επιβεβαίωση</string>
+
+    <string name="processing1">Αρχίζω την αγορά.</string>
+	<string name="processing2">Στέλνω μήνυμα.</string>
+	<string name="processing3">Διαδικασία χρέωσης.</string>
+	<string name="processing_subscribing">Προετοιμασία προπληρωμής.</string>
+	<string name="processing_unsubscribing">Κλείσιμο.</string>
+	<string name="processing_subscription">Διαδικασία προπληρωμής.</string>
+	<string name="processing_in_test_mode">Αυτή τη στιγμή λειτουργεί το test mode.</string>
+
+    <string name="fetching_fail_no_sim">Λείπει η SIM κάρτα.</string>
+	<string name="fetching_fail_no_sim_description">Η πληρωμές μέσω κινητού δεν είναι δυνατές χωρίς την κάρτα SIM.</string>
+	<string name="fetching_fail_airplane_mode_enabled">Η ρύθμιση λειτουργία πτήσης δε λειτουργεί αυτή τη στιγμή.</string>
+	<string name="fetching_fail_airplane_mode_enabled_description">Οι πληρωμές μέσω κινητού δεν είναι δυνατές με λειτουργία πτήσης.</string>
+	<string name="fetching_fail_airplane_mode_enabled_fix_button">Ρυθμίσεις</string>
+	<string name="fetching_fail_no_network">Πρόβλημα με τον πάροχος κινητής τηλεφωνίας</string>
+	<string name="fetching_fail_no_network_description">Αυτή τη στιγμή δεν υπάρχει πρόσβαση στο δίκτυο κινητής τηλεφωνίας, πιθανότατα επειδή η συσκευή βρίσκεται εκτός εμβέλειας.</string>
+	<string name="fetching_fail_no_network_fix_button">Ρυθμίσεις</string>
+	<string name="fetching_fail_no_mcc_mnc">Πρόβλημα με τον πάροχος κινητής τηλεφωνίας</string>
+	<string name="fetching_fail_no_mcc_mnc_description">Δεν είναι δυνατή η ανάγνωση πληροφοριών για τον πάροχο κινητής τηλεφωνίας. Παρακαλούμε να ελέγξετε το σήμα ή δοκιμάστε ξανά.</string>
+
+    <string name="subscription_daily">σε ημερήσια βάση</string>
+	<string name="subscription_weekly">σε εβδομαδιαία βάση</string>
+	<string name="subscription_monthly">σε μηνιαία βάση</string>
+	<string name="subscription_annually">σε ετήσια βάση</string>
+	<string name="subscription_subscribe">προπληρώστε</string>
+	<string name="subscription_unsubscribe">αποσυνδέστε</string>
+	<string name="subscription_subscribe_failed">Ανεπιτυχής προπληρωμή!</string>
+	<string name="subscription_unsubscribe_failed">Ανεπιτυχής αποσύνδεση!</string>
+	<string name="subscription_unsubscribe_failed_generic">Ανεπιτυχής αποσύνδεση.</string>
+	<string name="subscription_auto_unsubscribe_note">ΠΡΟΣΟΧΗ: Εάν δείτε αυτό το μήνυμα, ήδη έχετε αποσυνδεθεί και ο λογαριασμός του κινητού σας τηλεφώνου δε θα χρεωθεί επιπλέον.</string>
+	<string name="subscription_unsupported_country">Αυτή τη στιγμή δεν υπάρχει υποστήριξη για τη χώρα σας</string>
+	<string name="subscription_unexisting_service">Η υπηρεσία στη οποία προσπαθείτε να  %s δεν υπάρχει.</string>
+	<string name="subscription_unsupported_mno">Αυτή τη στιγμή δεν υπάρχει υποστήριξη για το δικό σας πάροχο κινητής τηλεφωνίας .</string>
+	<string name="subscription_disabled_service">Η υπηρεσία στη οποία προσπαθείτε να  %s δε λειτουργεί.</string>
+	<string name="subscription_fail_generic">Δν είναι δυνατόν να πάρετε τη λίστα χρονικών διαστημάτων για προπληρωμή από τον εξυπηρετητή. Παρακαλούμε δοκιμάστε ξανά. Εάν το πρόβλημα δε λυθεί, παρακαλούμε να επικοινωνήσετε με το κέντρο υποστήριξης.</string>
+	<string name="subscription_already_unsubscribed">Ήδη έχετε αποσυνδεθεί από την υπηρεσία αυτή.</string>
+	<string name="subscription_canceled">Η εγγραφή ακυρώθηκε.</string>
+	<string name="subscription_unsubscribe_canceled">Η αποσύνδεση ακυρώθηκε.</string>
+	<string name="subscription_unsubscribe_maybe_subscribed">Η αποσύνδεση ακυρώθηκε, όμως υπάρχει πιθανότητα να έχετε αποσυνδεθεί με επιτυχία επειδή το μήνυμα εγγραφής εστάλη.</string>
+	<string name="subscription_maybe_subscribed">Η εγγραφή ακυρώθηκε, όμως υπάρχει πιθανότητα να έχετε εγγραφεί με επιτυχία επειδή το μήνυμα εγγραφής εστάλη.</string>
+	<string name="subscription_state_unchanged">Η αποσύνδεση ακυρώθηκε. Ο λογαριασμός του κινηού σας τηλεφώνου δε χρεώθηκε επιπλέον.</string>
+	<string name="subscription_init_failed">Ανπιτυχής προετοιμασία προπληρωμής. Παρακαλούμε δοκιμάστε ξανά. Εάν το πρόβληθμα δε λυθεί, επικοινωνήστε με το κέντρο υποστήριξης.</string>
+	<string name="subscription_unsubscribe_init_failed">Ανεπιτυχής προετοιμασία αοπσύνδεσης. Παρακαλούμε δοκιμάστε ξανά. Εάν το πρόβλημα δε λυθεί, παρακαλούμε επικοινωνήστε με το κέντρο υποστήριξης.</string>
+	<string name="subscription_canceled_details">Η προπληρωμή ακυρώθηκε.</string>
+	<string name="subscription_failed_insufficient_funds">Παρακαλούμε να ελέγξετε εάν διαθέτετε αρκετά μέσα στο λογαριασμό σας και δοκιμάστε ξανά.</string>
+</resources>

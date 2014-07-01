@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mcc_silent_billing">202<!-- Greece -->,280<!-- Cyprus -->,208<!-- France -->,214<!-- Spain -->,222<!-- Italy -->,286<!-- Turkey --></string>
+    <string name="mccmnc_external_sms">23106,28601,28602,28603,28604</string>
+    <string name="double_opt_in_hide_first_mo">28601,28602,28603,28604</string>
+    <string name="right_to_left">false</string>
+	<string name="app_name">Centili Billing</string>
+	<string name="yes">Yes</string>
+	<string name="info">Info</string>
+	<string name="no">No</string>
+	<string name="ok">OK</string>
+	<string name="close">Close</string>
+	<string name="cancel">Cancel</string>
+	<string name="pay">Pay</string>
+	<string name="pay_question">Pay %s %s?</string>
+	<string name="wait">Wait</string>
+	<string name="next">Next</string>
+	<string name="continue_waiting">Continue waiting?</string>
+	<string name="check_last_purchase">Check last purchase?</string>
+	<string name="purchase_wait">This transaction takes longer than expected. If you wish to continue waiting, please tap &apos;Wait&apos; button. If you wish to cancel waiting and transaction, please tap &apos;Cancel&apos; button.</string>
+    <string name="purchase_wait_url_redirect_with_additional_msg">This transaction takes longer than expected. If you wish to continue waiting, please tap &apos;Wait&apos; button. If you wish to cancel waiting and transaction or you haven't confirmed the transaction on the previous dialog, please tap &apos;Cancel&apos; button.</string>
+    <string name="pending_purchase_message">There is (at least) one transaction that was aborted during verification phase. Would you like to check the status of that transaction? Answering &apos;Yes&apos; will check the status of previous transaction, without additional cost to your mobile phone bill. Tap &apos;No&apos; if you want to start new transaction.</string>
+	<string name="terms_and_conditions">Terms &amp; Conditions</string>
+	<string name="purchase_unsuccessfull">Purchase unsuccessful!</string>
+	<string name="purchase_canceled">Purchase canceled</string>
+	<string name="purchase_has_been_canceled">Purchase has been canceled.</string>
+	<string name="nothing_charged_note">NOTE: Nothing was charged to your phone bill.</string>
+	<string name="purchase_dropdown_item">%s %s - %s %s</string>
+    <string name="purchase_dropdown_item_wallet">%s %s - %s %s</string>
+	<string name="payment_bill_charging_info">The cost will be charged to your mobile phone bill.</string>
+    <string name="payment_bill_charging_info_wallet">The cost will be charged to your mobile wallet account.</string>
+	<string name="unable_to_send_sms">Unable to send SMS. Please try again.</string>
+	<string name="please_try_again">Please try again.</string>
+	<string name="phone_bill_maybe_charged">NOTE: Your phone bill MAY have been charged.</string>
+	<string name="subscription_bill_charging_info">The cost will be charged to your mobile phone bill %s.</string>
+	<string name="subscription_dropdown_item">%s - %s %s</string>
+	<string name="mobile_data_required">Mobile data required</string>
+	<string name="mobile_data_auto_set_failed">Failed to automatically set data access over Mobile network. Please ensure that Wi-Fi is disabled and that Mobile data is enabled, and then try again.</string>
+	<string name="network_settings">Network settings</string>
+	<string name="enter_phone_number">Please enter your phone number.</string>
+	<string name="enter_phone_number_example_1">E.g. %s</string>
+	<string name="enter_phone_number_example">&lt;small&gt; %s &lt;/small&gt;</string>
+	<string name="enter_phone_number_title">Enter phone number</string>
+	<string name="invalid_phone_number">Error, invalid phone number.</string>
+	
+	<string name="enter_pin">Enter the PIN</string>
+	<string name="enter_pin_title">PIN verification</string>
+	<string name="invalid_pin">Invalid PIN</string>
+	
+	<string name="mobile">Mobile</string>
+	<string name="wallet">Wallet</string>
+	
+	<string name="currency_format">0.00</string>
+	<string name="currency_format_grouping_separator"></string>
+	
+	<string name="fetching_fail_generic">Unable to retrieve list of product(s) from server. Please try again. If problem persists, please contact support.</string>
+	<string name="fetching_fail_unsupported_country">Your country is currently unsupported.</string>
+	<string name="fetching_fail_unexisting_service">Sorry, service for which you are initializing purchase doesn't exist. Please contact support.</string>
+	<string name="fetching_fail_unsupported_mno">Your network is currently unsupported.</string>
+	<string name="fetching_fail_disabled_service">Purchase service is currently disabled. Please try again later, or contact support.</string>
+	
+	<string name="purchase_init_fail">Purchase initialization failed. Please try again. If problem persists, please contact support.</string>
+	<string name="purchase_init_error_status">An error occurred while initializing your transaction. Please try again. If the problem persists, please contact support.</string>
+	<string name="purchase_confirmation_message">Please confirm that you want to pay %s %s. Payment will be done via sms by sending &apos;%s&apos; to &apos;%s&apos;.</string>
+	<string name="purchase_confirmation_title">Confirmation</string>
+	<string name="purchase_confirmation_send">Send</string>
+	<string name="purchase_confirmation_dont_send">Don't send</string>
+	
+	<string name="processing_please_wait">Please wait…</string>
+	<string name="processing1">Initiating purchase.</string>
+	<string name="processing2">Sending SMS.</string>
+	<string name="processing3">Processing payment.</string>
+	<string name="processing_subscribing">Initializing subscription.</string>
+	<string name="processing_unsubscribing">Unsubscribing.</string>
+	<string name="processing_subscription">Processing subscription.</string>
+	<string name="processing_in_test_mode">Currently in test mode.</string>
+	
+	<string name="fetching_fail_no_sim">SIM card missing</string>
+	<string name="fetching_fail_no_sim_description">Mobile payments can not be made without a SIM card.</string>
+	<string name="fetching_fail_airplane_mode_enabled">Airplane mode ON</string>
+	<string name="fetching_fail_airplane_mode_enabled_description">Mobile payments are unavailable in Airplane mode.</string>
+	<string name="fetching_fail_airplane_mode_enabled_fix_button">Settings</string>
+	<string name="fetching_fail_no_network">Mobile network problem</string>	
+	<string name="fetching_fail_no_network_description">Mobile network is unavailable, device probably out of operator coverage area.</string>
+	<string name="fetching_fail_no_network_fix_button">Settings</string>
+	<string name="fetching_fail_no_mcc_mnc">Operator info problem</string>
+	<string name="fetching_fail_no_mcc_mnc_description">Operator information could not be read. Please check if network signal is OK and try again.</string>
+	
+	<string name="subscription_daily">daily</string>
+	<string name="subscription_weekly">weekly</string>
+	<string name="subscription_monthly">monthly</string>
+	<string name="subscription_annually">annually</string>
+	<string name="subscription_subscribe">subscribe</string>
+	<string name="subscription_unsubscribe">unsubscribe</string>
+	<string name="subscription_subscribe_failed">Subscription failed!</string>
+	<string name="subscription_unsubscribe_failed">Unsubscribe failed!</string>
+	<string name="subscription_unsubscribe_failed_generic">Unable to unsubscribe.</string>
+	<string name="subscription_auto_unsubscribe_note">NOTE: By seeing this message, it means that you are already unsubscribed and no additional charges will be added to your mobile phone bill.</string>
+	<string name="subscription_unsupported_country">Your country is currently unsupported.</string>
+	<string name="subscription_unexisting_service">Service for which you are trying to %s does not exist.</string>
+	<string name="subscription_unsupported_mno">Your network is currently unsupported.</string>
+	<string name="subscription_disabled_service">Service for which you are trying to %s is currently disabled.</string>
+	<string name="subscription_fail_generic">Unable to retrieve list of subscription interval(s) from server. Please try again. If problem persists, please contact support.</string>
+	<string name="subscription_already_unsubscribed">You are already unsubscribed for this service.</string>
+	<string name="subscription_canceled">Subscription canceled.</string>
+	<string name="subscription_unsubscribe_canceled">Unsubscribe canceled.</string>
+	<string name="subscription_unsubscribe_maybe_subscribed">Unsubscribe operation has been canceled, but you MAY be unsubscribed since stop subscription SMS has been sent.</string>
+	<string name="subscription_maybe_subscribed">Subscribe operation has been canceled, but you MAY be subscribed since start subscription SMS has been sent.</string>
+	<string name="subscription_state_unchanged">Unsubscribe operation has been canceled. No changes has been made to your subscription status.</string>
+	<string name="subscription_init_failed">Subscription initialization failed. Please try again. If problem persists, please contact support.</string>
+	<string name="subscription_unsubscribe_init_failed">Unsubscribe initialization failed. Please try again. If problem persists, please contact support.</string>
+	<string name="subscription_canceled_details">Subscription has been canceled.</string>
+	<string name="subscription_failed_insufficient_funds">Please check if your phone bill has sufficient funds and then try again.</string>
+	
+</resources>

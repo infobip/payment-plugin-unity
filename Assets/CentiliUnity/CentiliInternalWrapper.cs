@@ -7,6 +7,7 @@ public class CentiliInternalWrapper	: MonoBehaviour {
 	
 	private CentiliPaymentResponse lastCentiliPaymentResponse;
 	private CentiliPaymentStatus lastCentiliPaymentStatus;
+	private static AndroidJavaObject lastCentiliPaymentManager;
 	
 	public bool Logging { get; set; }
 	public void SetLoggingEnabled(bool logging) 
@@ -32,14 +33,15 @@ public class CentiliInternalWrapper	: MonoBehaviour {
 	private IEnumerator SetDebugModeCoroutine(bool enabled) 
 	{
 		GetInstance();
-		GetCurrentActivity().Call("setDebugModeEnabled", new object[] { enabled });
+		print("got instance");
+		GetCentiliPaymentManager().Call("setDebugModeEnabled", new object[] { enabled });
 		yield return 0;
 	}
 	
 	private IEnumerator SetPendingTransactionHandlingCoroutine(bool enabled)
 	{
 		GetInstance();
-		GetCurrentActivity().Call("setPendingTransactionHandlingEnabled", new object[] { enabled });
+		GetCentiliPaymentManager().Call("setPendingTransactionHandlingEnabled", new object[] { enabled });
 		yield return 0;
 	}
 	
@@ -76,7 +78,8 @@ public class CentiliInternalWrapper	: MonoBehaviour {
 		
 		// A method with a lot of parameters is acceptable here, because other options add even
 		// more bloat and won't help with readability (serializations)
-		GetCurrentActivity().Call("startPayment", new object[] 
+		lastCentiliPaymentManager = GetCentiliPaymentManager();
+		lastCentiliPaymentManager.Call("startPayment", new object[] 
 		{
 			presenceMask,
 			request.ApiKey == null					? "" : request.ApiKey,
@@ -114,7 +117,7 @@ public class CentiliInternalWrapper	: MonoBehaviour {
 	// Just ignore PENDING notification
 	public void SignalPaymentPending(string voidArg0)
 	{
-		CentiliPaymentResponse response = new CentiliPaymentResponse(GetCurrentActivity());
+		CentiliPaymentResponse response = new CentiliPaymentResponse(lastCentiliPaymentManager);
 		
 		lastCentiliPaymentStatus = CentiliPaymentStatus.PAYMENT_PENDING;
 		lastCentiliPaymentResponse = response;
@@ -122,7 +125,7 @@ public class CentiliInternalWrapper	: MonoBehaviour {
 	
 	public void SignalPaymentFailed(string voidArg0)
 	{
-		CentiliPaymentResponse response = new CentiliPaymentResponse(GetCurrentActivity());
+		CentiliPaymentResponse response = new CentiliPaymentResponse(lastCentiliPaymentManager);
 		
 		lastCentiliPaymentStatus = CentiliPaymentStatus.PAYMENT_FAILED;
 		lastCentiliPaymentResponse = response;
@@ -130,7 +133,7 @@ public class CentiliInternalWrapper	: MonoBehaviour {
 	
 	public void SignalPaymentCanceled(string voidArg0)
 	{
-		CentiliPaymentResponse response = new CentiliPaymentResponse(GetCurrentActivity());
+		CentiliPaymentResponse response = new CentiliPaymentResponse(lastCentiliPaymentManager);
 		
 		lastCentiliPaymentStatus = CentiliPaymentStatus.PAYMENT_CANCELED;
 		lastCentiliPaymentResponse = response;
@@ -138,7 +141,7 @@ public class CentiliInternalWrapper	: MonoBehaviour {
 	
 	public void SignalPaymentSuccessful(string voidArg0)
 	{
-		CentiliPaymentResponse response = new CentiliPaymentResponse(GetCurrentActivity());
+		CentiliPaymentResponse response = new CentiliPaymentResponse(lastCentiliPaymentManager);
 		
 		lastCentiliPaymentStatus = CentiliPaymentStatus.PAYMENT_SUCCESSFUL;
 		lastCentiliPaymentResponse = response;
@@ -174,5 +177,13 @@ public class CentiliInternalWrapper	: MonoBehaviour {
 	{
 		AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"); 
 		return unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+	}
+
+	private static AndroidJavaObject GetCentiliPaymentManager()
+	{
+		if (null != lastCentiliPaymentManager) {
+			return lastCentiliPaymentManager;
+		}
+		return new AndroidJavaObject("c.mpayments.android.unity.CentiliPaymentManager", GetCurrentActivity());
 	}
 }
